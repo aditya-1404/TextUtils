@@ -6,7 +6,7 @@ export default function (props) {
     <div>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode=='dark'?"dark":"light"} bg-${props.mode=='dark'?"dark":"light"}`}>
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/home">
             <strong>TextUtils</strong>
           </Link>
           <button
@@ -23,7 +23,7 @@ export default function (props) {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/home">
                   Home
                 </Link>
               </li>
