@@ -6,9 +6,9 @@ export default function (props) {
     <div>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode=='dark'?"dark":"light"} bg-${props.mode=='dark'?"dark":"light"}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
+          <Link className="navbar-brand" to="/">
+            <strong>TextUtils</strong>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -33,16 +33,6 @@ export default function (props) {
                 </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown link
-                </a>
               </li>
             </ul>
             <div className="htmlForm-check htmlForm-switch ms-auto">

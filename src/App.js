@@ -44,7 +44,7 @@ function App() {
     <Routes>
           <Route exact path="/" element={<Textform mode={dark} stylee={stylee} />}> 
           </Route>
-          <Route exact path="/features" element={<Features/>}>     
+          <Route exact path="/features" element={<Features mode={dark}/>}>     
           </Route>
     </Routes>
     </Router>
