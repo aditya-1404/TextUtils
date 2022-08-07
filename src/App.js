@@ -3,6 +3,7 @@ import Navbar from './components/navbar';
 import Textform from './components/textform';
 import React,{useState} from "react"; 
 import Features from './components/features'; 
+import Contact from './components/contact';
 
 import {
   BrowserRouter as Router,
@@ -14,6 +15,7 @@ import {
 
 function App() {
   const [dark,setDark]=useState('light');
+
   let stylee={
     color:"black",
     backgroundColor:"white",
@@ -45,6 +47,8 @@ function App() {
           <Route exact path="/text-utils" element={<Textform mode={dark} stylee={stylee} />}> 
           </Route>
           <Route exact path="/features" element={<Features mode={dark}/>}>     
+          </Route>
+          <Route exact path="/contact" element={<Contact mode={dark} />}>     
           </Route>
     </Routes>
     </Router>

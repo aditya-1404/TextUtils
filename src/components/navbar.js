@@ -1,7 +1,15 @@
 import React,{useState} from "react";
 import { Link } from 'react-router-dom';
+import LoadingBar from 'react-top-loading-bar'
+
 
 export default function (props) {
+  const [progress,setProgress]=useState(0);
+  const showLoading=()=>{
+    let rand=Math.random()*100;
+    setProgress(rand);
+    setTimeout(()=>setProgress(100),500)
+  }
   return (
     <div>
       <nav className={`navbar navbar-expand-lg navbar-${props.mode=='dark'?"dark":"light"} bg-${props.mode=='dark'?"dark":"light"}`}>
@@ -23,16 +31,19 @@ export default function (props) {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/text-utils">
+                <Link className="nav-link active" onClick={showLoading} aria-current="page" to="/text-utils">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to='/features'>
+                <Link className="nav-link" onClick={showLoading} to='/features'>
                   Features
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item">
+                <Link className="nav-link" onClick={showLoading} to='/contact'>
+                  Contact Us
+                </Link>
               </li>
             </ul>
             <div className="htmlForm-check htmlForm-switch ms-auto">
@@ -52,6 +63,11 @@ export default function (props) {
           </div>
         </div>
       </nav>
+      <LoadingBar
+        color='#f11946'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
     </div>
   );
 }
