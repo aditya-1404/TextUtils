@@ -44,7 +44,7 @@ function App() {
     <Router>
     <Navbar mode={dark} toggle={ToggleDark}/>
     <Routes>
-          <Route exact path="/text-utils" element={<Textform mode={dark} stylee={stylee} />}> 
+          <Route exact path="/" element={<Textform mode={dark} stylee={stylee} />}> 
           </Route>
           <Route exact path="/features" element={<Features mode={dark}/>}>     
           </Route>

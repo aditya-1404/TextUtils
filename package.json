@@ -1,7 +1,6 @@
 {
   "name": "text-utils",
   "version": "0.1.0",
-  "homepage": "http://demon-14.github.io/text-utils",
   "proxy": "http://localhost:5000/",
   "private": true,
   "dependencies": {
